@@ -78,12 +78,12 @@ easily get data on forced displacement or statelessness.
 library(refugees)
 library(dplyr)
 glimpse(refugees::population)
-#> Rows: 120,338
+#> Rows: 126,402
 #> Columns: 16
 #> $ year              <dbl> 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951…
 #> $ coo_name          <chr> "Unknown", "Unknown", "Unknown", "Unknown", "Unknown…
 #> $ coo               <chr> "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UK…
-#> $ coo_iso           <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+#> $ coo_iso           <chr> "UNK", "UNK", "UNK", "UNK", "UNK", "UNK", "UNK", "UN…
 #> $ coa_name          <chr> "Australia", "Austria", "Belgium", "Canada", "Denmar…
 #> $ coa               <chr> "AUL", "AUS", "BEL", "CAN", "DEN", "FRA", "GBR", "GF…
 #> $ coa_iso           <chr> "AUS", "AUT", "BEL", "CAN", "DNK", "FRA", "GBR", "DE…
@@ -95,7 +95,7 @@ glimpse(refugees::population)
 #> $ stateless         <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
 #> $ ooc               <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
 #> $ oip               <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-#> $ hst               <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+#> $ hst               <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
 ```
 
 The `population` dataset can be used to get the 10 countries of origin
@@ -112,21 +112,21 @@ ref_coo_10
 #> # A tibble: 10 × 2
 #>    coo_name                           refugees
 #>    <chr>                                 <dbl>
-#>  1 Syrian Arab Rep.                    6547818
-#>  2 Ukraine                             5679880
-#>  3 Afghanistan                         5661675
-#>  4 Venezuela (Bolivarian Republic of)  5451832
-#>  5 South Sudan                         2294983
-#>  6 Myanmar                             1253111
-#>  7 Dem. Rep. of the Congo               931903
-#>  8 Sudan                                836756
-#>  9 Somalia                              790513
-#> 10 Central African Rep.                 748327
+#>  1 Syrian Arab Rep.                    6559736
+#>  2 Ukraine                             5684177
+#>  3 Afghanistan                         5661717
+#>  4 Venezuela (Bolivarian Republic of)  5447849
+#>  5 South Sudan                         2295082
+#>  6 Myanmar                             1251618
+#>  7 Dem. Rep. of the Congo               932680
+#>  8 Sudan                                837188
+#>  9 Somalia                              786794
+#> 10 Central African Rep.                 748344
 ```
 
 We can use `ggplot2` and the
-[`unhcrthemes`](https://github.com/vidonne/unhcrthemes) to visualize our
-data following the [UNHCR data visualization
+[`unhcrthemes`](https://github.com/unhcr-dataviz/unhcrthemes) to
+visualize our data following the [UNHCR data visualization
 guidelines](https://dataviz.unhcr.org/general_guidance/).
 
 ``` r
@@ -141,7 +141,7 @@ ref_coo_10 |>
             hjust = -0.2) +
   scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
   labs(title = "Refugees, people in refugee-like situations and other people in need of international protection",
-       subtitle = "By country of origin | end-2022",
+       subtitle = "By country of origin | end-2023",
        caption = "Source: UNHCR Refugee Data Finder") +
   theme_unhcr(font_size = 12,
               grid = FALSE,
