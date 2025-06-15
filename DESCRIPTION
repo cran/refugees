@@ -1,7 +1,7 @@
 Package: refugees
 Type: Package
 Title: UNHCR Refugee Population Statistics Database
-Version: 2024.6.0
+Version: 2024.12.0
 Authors@R: c(person(given = "Hisham",
                     family = "Galal",
                     email = "galal@unhcr.org",
@@ -32,14 +32,14 @@ LazyDataCompression: xz
 Depends: R (>= 3.5)
 Imports: tibble (>= 3.2.0)
 Suggests: testthat (>= 3.1.0)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Encoding: UTF-8
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-10-19 00:11:51 UTC; galal
+Packaged: 2025-06-14 03:48:42 UTC; galal
 Author: Hisham Galal [aut, cre],
   Ahmadou Dicko [ctb],
   UNHCR [cph]
 Maintainer: Hisham Galal <galal@unhcr.org>
 Repository: CRAN
-Date/Publication: 2024-10-19 07:50:02 UTC
+Date/Publication: 2025-06-15 00:30:02 UTC
